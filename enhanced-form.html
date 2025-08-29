@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML5 Demo</title>
+    <meta name="description" content="A simplified HTML5 page demonstrating basic structure, accessibility, and form validation.">
+    <meta name="keywords" content="HTML5, forms, accessibility, validation">
+</head>
+<body>
+    <a href="#main-content" style="position:absolute; top:-40px; left:0; background:#000; color:#fff; padding:8px; z-index:100; text-decoration:none;">Skip to main content</a>
+    
+    <header>
+        <h1>Welcome to My Simple Page</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#info">Information</a></li>
+                <li><a href="#contact">Contact Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="info" aria-labelledby="info-heading">
+            <h2 id="info-heading">Key Information</h2>
+            
+            <h3>My Favorite Things</h3>
+            <ul>
+                <li>Reading</li>
+                <li>Coding</li>
+                <li>Learning</li>
+            </ul>
+
+            <h3>Some Data</h3>
+            <table border="1">
+                <caption>Monthly Report Highlights</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Month</th>
+                        <th scope="col">Sales</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">January</th>
+                        <td>$1000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">February</th>
+                        <td>$1200</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>An Image</h3>
+            <figure>
+                <img src="https://placehold.co/400x200/007bff/ffffff?text=Simple+Image" alt="A simple placeholder image with text 'Simple Image'.">
+                <figcaption>A placeholder image.</figcaption>
+            </figure>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Us</h2>
+            <p>Please fill out this simple form.</p>
+
+            <form action="submit-form.php" method="POST">
+                <fieldset>
+                    <legend>Your Details</legend>
+
+                    <p>
+                        <label for="name">Name: <span style="color:red;">*</span></label><br>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required minlength="2" autocomplete="name">
+                    </p>
+
+                    <p>
+                        <label for="email">Email: <span style="color:red;">*</span></label><br>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+                    </p>
+                    
+                    <p>
+                        <label for="message">Message: <span style="color:red;">*</span></label><br>
+                        <textarea id="message" name="message" rows="4" placeholder="Your message here..." required minlength="10"></textarea>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Send Message</button>
+                    <button type="reset">Clear Form</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <time datetime="2025">2025</time> Simple Demo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
